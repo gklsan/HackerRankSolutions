@@ -15,6 +15,17 @@ print (sum)
 
 ```
 
+Input:
+```
+2
+3
+```
+
+Output:
+```
+5
+```
+
 # simple-array-sum
 https://www.hackerrank.com/challenges/simple-array-sum/problem
 ```
@@ -38,6 +49,15 @@ fptr.write "\n"
 fptr.close()
 ```
 
+Input:
+```
+6
+1 2 3 4 10 11
+```
+Output:
+```
+31
+```
 # time-conversion
 https://www.hackerrank.com/challenges/time-conversion/problem
 ```
@@ -60,6 +80,16 @@ fp.write result
 fp.write "\n"
 
 fp.close()
+```
+
+Input:
+```
+07:05:45PM
+```
+
+Output:
+```
+19:05:45
 ```
 
 # mini-max-sum
@@ -86,6 +116,17 @@ arr = gets.rstrip.split(' ').map(&:to_i)
 miniMaxSum arr
 ```
 
+Input:
+```
+1 2 3 4 5
+```
+
+Output:
+```
+10 14
+
+```
+
 # staircase
 
 https://www.hackerrank.com/challenges/staircase/problem
@@ -103,6 +144,21 @@ end
 n = gets.to_i
 
 staircase n
+```
+
+Input:
+```
+6 
+```
+
+Output:
+```
+     #
+    ##
+   ###
+  ####
+ #####
+######
 ```
 
 # plus-minus
@@ -133,6 +189,19 @@ n = gets.to_i
 arr = gets.rstrip.split(' ').map(&:to_i)
 
 plusMinus arr
+```
+
+
+Input:
+```
+6
+-4 3 -9 0 4 1         
+```
+Output:
+```
+0.500000
+0.333333
+0.166667
 ```
 
 # diagonal-difference
@@ -174,6 +243,17 @@ fptr.write "\n"
 fptr.close()
 ```
 
+Input:
+```
+3
+11 2 4
+4 5 6
+10 8 -12
+```
+Output:
+```
+15
+```
 
 # a-very-big-sum
 
@@ -201,6 +281,17 @@ fptr.write result
 fptr.write "\n"
 
 fptr.close()
+```
+
+Input:
+```
+5
+1000000001 1000000002 1000000003 1000000004 1000000005
+```
+
+Output:
+```
+5000000015
 ```
 
 # compare-the-triplets
@@ -233,4 +324,15 @@ fptr.write "\n"
 
 fptr.close()
 
+```
+
+Input:
+```
+5 6 7
+3 6 10
+```
+
+Output:
+```
+1 1 
 ```
