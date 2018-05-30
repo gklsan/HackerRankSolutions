@@ -336,3 +336,75 @@ Output:
 ```
 1 1 
 ```
+
+# extra-long-factorials
+
+https://www.hackerrank.com/challenges/extra-long-factorials/problem
+
+```
+#!/bin/ruby
+
+require 'json'
+require 'stringio'
+
+# Complete the extraLongFactorials function below.
+def extraLongFactorials(n)
+    puts (1..n).to_a.inject(&:*)
+end
+
+n = gets.to_i
+
+extraLongFactorials n
+```
+
+Input:
+```
+25
+```
+Output: 
+```
+15511210043330985984000000
+```
+# reduced-string
+
+https://www.hackerrank.com/challenges/reduced-string/problem
+
+```
+#!/bin/ruby
+
+require 'json'
+require 'stringio'
+
+# Complete the super_reduced_string function below.
+def super_reduced_string(s)
+    s_len = s.length
+    return "Empty String" if s_len < 1
+    res = ""
+    s_len.times{|t|
+      char = s[t]
+      (res.length >= 1 && res[-1] == char) ? res.slice!(-1) : (res += char)
+    }
+    res != "" ? res : "Empty String"
+end
+
+fptr = File.open(ENV['OUTPUT_PATH'], 'w')
+
+s = gets.to_s.rstrip
+
+result = super_reduced_string s
+
+fptr.write result
+fptr.write "\n"
+
+fptr.close()
+
+```
+
+Input:
+```
+aaabccddd
+```
+Output: 
+```
+abd
+```
