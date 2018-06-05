@@ -408,3 +408,69 @@ Output:
 ```
 abd
 ```
+
+# clock-delay
+
+https://www.hackerrank.com/contests/hourrank-28/challenges/clock-delay/problem
+
+```
+#!/bin/ruby
+
+require 'json'
+require 'stringio'
+
+# Complete the lagDuration function below.
+def lagDuration(h1, m1, h2, m2, k)
+    t1 = Time.new(2018, 01, 01, h1, m1)
+    t2 = Time.new(2018, 01, 01, h2, m2)
+    t3 = Time.new(2018, 01, 01, (h1 + k), m1)
+    res1 = ((t1.to_i - t2.to_i).abs)/60
+    res2 = ((t1.to_i - t3.to_i).abs)/60
+    (res2 - res1)
+end
+
+fptr = File.open(ENV['OUTPUT_PATH'], 'w')
+
+q = gets.to_i
+
+q.times do |q_itr|
+    h1M1H2M2 = gets.rstrip.split
+
+    h1 = h1M1H2M2[0].to_i
+
+    m1 = h1M1H2M2[1].to_i
+
+    h2 = h1M1H2M2[2].to_i
+
+    m2 = h1M1H2M2[3].to_i
+
+    k = gets.to_i
+
+    result = lagDuration h1, m1, h2, m2, k
+
+    fptr.write result
+    fptr.write "\n"
+end
+
+fptr.close()
+
+```
+Input:
+```
+4
+21 2 21 27
+2
+1 57 5 34
+10
+18 45 19 4
+5
+8 55 11 12
+3
+```
+Output:
+```
+95
+383
+281
+43
+```
