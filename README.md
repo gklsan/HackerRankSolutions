@@ -421,12 +421,17 @@ require 'stringio'
 
 # Complete the lagDuration function below.
 def lagDuration(h1, m1, h2, m2, k)
-    t1 = Time.new(2018, 01, 01, h1, m1)
-    t2 = Time.new(2018, 01, 01, h2, m2)
-    t3 = Time.new(2018, 01, 01, (h1 + k), m1)
-    res1 = ((t1.to_i - t2.to_i).abs)/60
-    res2 = ((t1.to_i - t3.to_i).abs)/60
-    (res2 - res1)
+    #t1 = Time.new(2018, 01, 01, h1, m1)
+    #t2 = Time.new(2018, 01, 01, h2, m2)
+    #t3 = Time.new(2018, 01, 01, (h1 + k), m1)
+    #res1 = ((t1.to_i - t2.to_i).abs)/60
+    #res2 = ((t1.to_i - t3.to_i).abs)/60
+    #(res2 - res1)
+    
+    # Shortest way to do
+    h = h2 - h1
+    m = m2 - m1
+    k * 60 - (h * 60 + m)
 end
 
 fptr = File.open(ENV['OUTPUT_PATH'], 'w')
